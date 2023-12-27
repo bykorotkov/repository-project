@@ -1,0 +1,356 @@
+@import "@/css/common.scss";
+
+.Repositories {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  height: 100vh;
+
+  .QueryString {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .QueryInput {
+      border: 1px solid #000;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 1000px;
+      padding: 10px;
+    }
+
+    .CopyButton {
+      margin-left: 10px;
+      background-color: #fff;
+      border: 1px solid #000;
+      transition: all .25s ease;
+      cursor: pointer;
+      padding: 10px 50px;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: #000;
+        color: #fFf;
+      }
+    }
+  }
+
+  .RepoLists {
+    margin-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    .ListContainer {
+      .Body {
+        width: 600px;
+        margin-top: 30px;
+        overflow: auto;
+        max-height: 500px;
+
+        .ListItem {
+          border: 1px solid #2c2c2c;
+          margin-top: 15px;
+          border-radius: 10px;
+          padding: 15px;
+
+          .TopBlock {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+
+          .Logo {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            img {
+              max-width: 100px;
+              max-height: 100px;
+              border-radius: 16px;
+            }
+          }
+
+          .Info {
+              margin-bottom: 10px;
+              font-size: 20px;
+              line-height: 24px;
+              font-weight: 600;
+          }
+
+          .Button {
+            transition: all .25s ease;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-top: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: navajowhite;
+            }
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          .repoButton {
+            padding: 10px 30px;
+            width: 100%;
+            background-color: aliceblue;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all .25s ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .FavoritesListContainer {
+      .Body {
+        width: 430px;
+        margin-top: 30px;
+        overflow: auto;
+        max-height: 500px;
+
+        .ListItem {
+          border: 1px solid #2c2c2c;
+          margin-top: 15px;
+          border-radius: 10px;
+          padding: 15px;
+
+          .TopBlock {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+          }
+
+          .Logo {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            img {
+              max-width: 100px;
+              max-height: 100px;
+              border-radius: 16px;
+            }
+          }
+
+          .Info {
+            margin-bottom: 10px;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          .repoButton {
+            padding: 10px 30px;
+            width: 100%;
+            background-color: aliceblue;
+            border-radius: 8px;
+            margin-top: 10px;
+            transition: all .25s ease;
+            cursor: pointer;
+
+            &:hover {
+              background-color: #000;
+              color: #fff;
+            }
+          }
+          .Button {
+            transition: all .25s ease;
+            background-color: #fff;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            margin-top: 10px;
+            border: 1px solid #000000;
+            border-radius: 10px;
+
+            &:hover {
+              background-color: navajowhite;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: $desktopWide) {
+    .Repositories {
+      .RepoLists {
+        .ListContainer {
+          .Body {
+            max-height: 700px;
+          }
+        }
+
+        .FavoritesListContainer {
+          .Body {
+            max-height: 700px;
+          }
+        }
+      }
+    }
+}
+
+@media only screen and (min-width: $tabletLandscapeMin) and (max-width: $tabletLandscapeMax) {
+    .Repositories {
+      max-width: 100%;
+      padding: 50px 40px;
+
+      .RepoLists{
+        .ListContainer{
+          .Body {
+            width: 100%;
+            max-width: 450px;
+
+            .ListItem {
+              .Info {
+                font-size: 14px;
+                line-height: 19px;
+              }
+            }
+          }
+        }
+
+        .FavoritesListContainer{
+          .Body {
+            width: 100%;
+            max-width: 450px;
+
+            .ListItem {
+              .Info {
+                font-size: 14px;
+                line-height: 19px;
+              }
+            }
+          }
+        }
+      }
+    }
+}
+
+@media only screen and (min-width: $tabletPortraitMin) and (max-width: $tabletPortraitMax) {
+  .Repositories {
+    max-width: 100%;
+    padding: 50px 40px;
+
+    .RepoLists{
+      .ListContainer{
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .Body {
+          width: 100%;
+          max-width: 330px;
+          max-height: 750px;
+
+          .ListItem {
+            .Info {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+
+      .FavoritesListContainer{
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .Body {
+          width: 100%;
+          max-width: 330px;
+          max-height: 750px;
+
+          .ListItem {
+            .Info {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $mobile) {
+  .Repositories {
+    max-width: 100%;
+    padding: 50px 20px;
+
+    .RepoLists{
+      flex-direction: column;
+      margin-top: 20px;
+      .ListContainer{
+        width: 100%;
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .Body {
+          width: 100%;
+          max-width: 100%;
+          max-height: 500px;
+
+          .ListItem {
+            .Info {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+
+      .FavoritesListContainer{
+        margin-top: 50px;
+        width: 100%;
+        h2 {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        .Body {
+          width: 100%;
+          max-width: 100%;
+          max-height: 500px;
+
+          .ListItem {
+            .Info {
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

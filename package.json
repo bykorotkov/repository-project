@@ -9,16 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^1.6.2",
+    "classnames": "^2.3.2",
+    "clipboard-copy": "^4.0.1",
+    "lodash": "^4.17.21",
+    "mobx": "^6.12.0",
+    "mobx-react": "^9.1.0",
+    "mobx-react-lite": "^4.0.5",
+    "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.0.4"
+    "sass": "^1.69.5"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "prettier": "^3.1.1",
+    "typescript": "^5"
   }
 }
